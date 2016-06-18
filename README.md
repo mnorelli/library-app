@@ -322,6 +322,7 @@ class UsersController < ApplicationController
 
 end
 ```
+</details>
 
 Now when you submit the form you get the following error:
 

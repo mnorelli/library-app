@@ -1,0 +1,11 @@
+<h3>Users!</h3>
+
+<div>
+There are currently <%= @users.length %> signed_up
+</div>
+
+<%= @users.each do |user| %>
+<hr>
+<%= user.email %>
+<%= user.first_name %><%= user.last_name %>
+<% end %>

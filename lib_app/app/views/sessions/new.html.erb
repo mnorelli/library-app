@@ -1,4 +1,4 @@
-<h3>Sign In</h3>
+<h3>Sign In (sessions)</h3>
 
 
 <%= form_for @user, url: "/sessions", method: "post" do |field| %>
@@ -9,6 +9,6 @@
   <%= field.password_field :password, placeholder: 'Password' %>
 </div>
 <div>
-  <%= field.submit 'Sign Up' %>
+  <%= field.submit 'Sign In' %>
 </div>
 <% end %>

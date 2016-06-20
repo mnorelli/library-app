@@ -20,6 +20,25 @@ class LibrariesController < ApplicationController
     end
   end
 
+  def show
+    @library = Library.find(params[:id])
+    render :show
+  end
+
+  def edit
+    library_params = params.require(:library).permit(:name, :floor_count, :floor_area)
+    Library.update(params[:id],library_params)
+    redirect_to "/libraries"
+  end
+
+  def delete
+    library = Library.find(params[:id])
+    if library.destroy
+      redirect_to libraries_path
+    else
+      redirect_to edit_library_path
+    end
+  end
 
 
 end

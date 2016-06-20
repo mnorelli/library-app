@@ -4,4 +4,5 @@
 <hr>
 <%= library.name %>
 <%= library.floor_count %> floors <%= library.floor_area %> sq. ft.
+<%= button_to 'edit', edit_library_path(library.id), :method => :get %><%= button_to 'delete', delete_library_path(library.id), :method => :delete %>
 <% end %>

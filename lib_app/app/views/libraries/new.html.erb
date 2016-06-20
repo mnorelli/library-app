@@ -1,0 +1,18 @@
+<h3>New library</h3>
+
+
+<%= form_for @library, url: "/libraries", method: "post" do |field| %>
+<div>
+  <%= field.text_field :name, placeholder: 'Name' %>
+</div>
+<div>
+  <%= field.number_field :floor_count, placeholder: 'Floor count' %>
+</div>
+<div>
+  <%= field.number_field :floor_area, placeholder: 'Floor Area' %>
+</div>
+<div>
+  <%= field.submit 'Create' %>
+</div>
+<% end %>
+

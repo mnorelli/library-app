@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   get '/sign_in', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
 
+  get '/libraries', to: 'libraries#index', as: 'libraries'
+  get "/libraries/new", to: "libraries#new", as: "new_library"
+  post '/libraries', to: 'libraries#create'
+  get '/libraries/:id', to: 'libraries#show'
 
 end
